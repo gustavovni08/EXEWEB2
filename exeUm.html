@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Nome e Sobrenome</title>
+  </head>
+  <body>
+    <label for="nomeCompleto">Nome Completo:</label>
+    <input type="text" id="nomeCompleto">
+    
+    <button onclick="mostrarNome()">Mostrar Nome e Sobrenome</button>
+    
+    <div>
+   
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome">
+    
+    <label for="sobrenome">Sobrenome:</label>
+    <input type="text" id="sobrenome">
+
+    </div>
+
+    
+    <script>
+      function mostrarNome() {
+        var nomeCompleto = document.getElementById("nomeCompleto").value;
+        var espaco = nomeCompleto.indexOf(" ");
+        var nome = nomeCompleto.substring(0, espaco);
+        var sobrenome = nomeCompleto.substring(espaco + 1);
+        document.getElementById("nome").value = nome;
+        document.getElementById("sobrenome").value = sobrenome;
+      }
+    </script>
+  </body>
+</html>
